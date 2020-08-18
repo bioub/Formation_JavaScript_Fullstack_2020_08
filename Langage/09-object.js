@@ -36,19 +36,26 @@ for (const key in coords) {
 
 // réutiliser des objets (et/ou besoin de méthodes)
 // -> fonction constructeur
-class Contact {
-  constructor(prenom) {
-    this.prenom = prenom;
-    // this.hello = function() {
-    //   return `Hello (object) ${this.prenom}`;
-    // }
-  }
-  hello() {
-    return `Hello ${this.prenom}`;
-  }
+function Contact(prenom) {
+  this.prenom = prenom;
 }
 
-const romain = new Contact('Romain');
+Contact.prototype.hello = function () {
+  return `Hello ${this.prenom}`;
+};
+// class Contact {
+//   constructor(prenom) {
+//     this.prenom = prenom;
+//     // this.hello = function() {
+//     //   return `Hello (object) ${this.prenom}`;
+//     // }
+//   }
+//   hello() {
+//     return `Hello ${this.prenom}`;
+//   }
+// }
+
+const romain = new Contact("Romain");
 
 console.log(typeof Contact); // function
 console.log(typeof romain); // object
@@ -59,5 +66,5 @@ console.log(romain.hello()); // object
 console.log(romain.prenom !== undefined); // true
 console.log(romain.hello !== undefined); // true
 
-console.log(romain.hasOwnProperty('prenom')); // true
-console.log(romain.hasOwnProperty('hello')); // false
+console.log(romain.hasOwnProperty("prenom")); // true
+console.log(romain.hasOwnProperty("hello")); // false
