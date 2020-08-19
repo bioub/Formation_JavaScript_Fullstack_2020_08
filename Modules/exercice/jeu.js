@@ -1,5 +1,5 @@
 const readline = require('readline');
-// importer Random
+const Random = require('./random');
 
 
 class Jeu {
@@ -45,4 +45,4 @@ class Jeu {
 }
 
 
-// exporter Jeu
+module.exports = Jeu;

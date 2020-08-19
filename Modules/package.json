@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "chalk": "^4.1.0"
+  },
+  "scripts": {
+    "start": "node commonjs/index.js",
+    "start:esm": "node --experimental-modules esm/index.mjs",
+    "test": "node commonjs/launch-tests.js"
+  }
+}
