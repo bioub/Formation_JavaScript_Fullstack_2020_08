@@ -4,9 +4,10 @@ function hello(name) {
   return `Hello ${name}`;
 }
 
-prenoms.forEach((p) => {
-  console.log(hello(p));
-});
+prenoms
+  .filter((p) => p.length === 4)
+  .map((p) => p.toUpperCase())
+  .forEach((p) => console.log(hello(p)));
 
 console.log('FIN');
 
@@ -18,4 +19,4 @@ console.log('FIN');
 // |hello - lg - hello - lg - hello - lg
 // |forEach                              - lg
 // +---------------------------------------------------------------------------------> temps
-//          Romain       Jean         Eric FIN
+//          ROMAIN       JEAN         ERIC FIN
