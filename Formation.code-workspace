@@ -5,6 +5,12 @@
 		},
 		{
 			"path": "Modules"
+		},
+		{
+			"path": "Node"
+		},
+		{
+			"path": "Exercice-Build"
 		}
 	],
 	"settings": {}
