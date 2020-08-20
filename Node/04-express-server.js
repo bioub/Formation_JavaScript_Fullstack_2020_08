@@ -9,7 +9,7 @@ app.get('/hello/:name', (req, res) => {
   res.json({ msg: `Hello ${req.params.name}` });
 });
 
-app.get('/contact', (req, res) => {
+app.all('/contact', (req, res) => {
   res.json({ prenom: 'Romain' });
 });
 

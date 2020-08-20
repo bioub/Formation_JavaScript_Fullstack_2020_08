@@ -1,8 +1,7 @@
-document.addEventListener('click', () => {
-  import('./my-math.mjs').then((MyMath) => {
-    console.log(MyMath.sum(1, 2));
-  });
-  import('./hello.mjs').then(({default: hello}) => {
-    console.log(hello('Romain'));
-  });
+document.addEventListener('click', async () => {
+  const MyMath = await import('./my-math.mjs');
+  console.log(MyMath.sum(1, 2));
+
+  const {default: hello} = await import('./hello.mjs');
+  console.log(hello('Romain'));
 });
