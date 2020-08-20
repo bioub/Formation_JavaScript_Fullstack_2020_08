@@ -1,0 +1,27 @@
+<div>
+  Name : <input [(ngModel)]="title" class="field" [ngClass]="{prenom: title === 'Romain'}">
+  <button>+</button>
+  <!--
+    Exercice :
+    Au clic du bouton, afficher l'élément dans un paragraphe
+    (autant de paragraphes de clic)
+  -->
+</div>
+<!--
+  const inputEl = document.createElement('input');
+  bind(title, inputEl.innerText);
+  inputEl.addEventListener('input', ($event) => {
+    inputEl.innerText = $event.target.value;
+    detectChanges();
+  });
+-->
+<!-- <p>Hello <span [innerText]="title"></span> !</p> -->
+<p>Hello {{ title }} !</p>
+
+<!-- <ng-template [ngIf]="title === 'Romain'">
+  <span>Romain</span>
+</ng-template> -->
+<!--
+<span *ngIf="title === 'Romain'">Romain</span>
+
+<p *ngFor="let prenom of ['Romain', 'Jean', 'Eric']">{{prenom}}</p> -->
