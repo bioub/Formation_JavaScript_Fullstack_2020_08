@@ -4,17 +4,23 @@ import { FormsModule } from "@angular/forms";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello/hello.component';
+import { HelloComponent } from './core/hello/hello.component';
+import { HomeComponent } from './core/home/home.component';
+import { NotFoundComponent } from './core/not-found/not-found.component';
+import { ContactsModule } from './contacts/contacts.module'
 
 @NgModule({
   declarations: [
     AppComponent,
-    HelloComponent
+    HelloComponent,
+    HomeComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FormsModule,
+    ContactsModule,
+    AppRoutingModule, // en dernier si route **
   ],
   providers: [],
   bootstrap: [AppComponent]
