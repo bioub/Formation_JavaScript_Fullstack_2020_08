@@ -1,0 +1,14 @@
+<div class="list-group">
+  <a
+    class="list-group-item list-group-item-action"
+    [routerLink]="[g._id]"
+    routerLinkActive="active"
+    *ngFor="let g of groups"
+  >
+    {{g.name}}
+  </a>
+</div>
+
+<a routerLink="create" class="btn btn-block btn-primary mt-3">
+  Ajouter un groupe
+</a>

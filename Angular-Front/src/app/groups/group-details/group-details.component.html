@@ -1,0 +1,13 @@
+<p *ngIf="loading">
+  Loading...
+</p>
+
+<p>
+  <b>Nom :</b>
+  {{ group?.name }}
+</p>
+
+<p *ngIf="group?.description">
+  <b>Description :</b>
+  {{ group.description }}
+</p>

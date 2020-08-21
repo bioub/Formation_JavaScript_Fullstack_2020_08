@@ -18,6 +18,10 @@ const routes: Routes = [
     loadChildren: () => import('./contacts/contacts.module').then((m) => m.ContactsModule)
   },
   {
+    path: 'groups',
+    loadChildren: () => import('./groups/groups.module').then((m) => m.GroupsModule)
+  },
+  {
     path: '**',
     component: NotFoundComponent,
   }
