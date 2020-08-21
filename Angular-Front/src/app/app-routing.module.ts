@@ -14,6 +14,10 @@ const routes: Routes = [
     component: HelloComponent,
   },
   {
+    path: 'contacts',
+    loadChildren: () => import('./contacts/contacts.module').then((m) => m.ContactsModule)
+  },
+  {
     path: '**',
     component: NotFoundComponent,
   }
