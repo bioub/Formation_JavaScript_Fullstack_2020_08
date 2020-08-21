@@ -16,3 +16,8 @@
   <b>Email :</b>
   {{ contact.email }}
 </p>
+
+<p *ngIf="contact?.group?._id">
+  <b>Groupe :</b>
+  <a [routerLink]="['/groups', contact.group._id]">{{ contact.group.name }}</a>
+</p>

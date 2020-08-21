@@ -59,6 +59,24 @@
       L'email n'est pas au bon format
     </div>
   </div>
+  <div class="form-group">
+    <label>Groupe</label>
+    <select
+      type="email"
+      class="form-control"
+      name="group"
+      [(ngModel)]="contact.group"
+    >
+    <option value="">
+    </option>
+    <option
+      *ngFor="let g of groups"
+      [value]="g._id"
+    >
+      {{g.name}}
+</option>
+  </select>
+  </div>
   <div>
     <button class="btn btn-primary">Create</button>
   </div>

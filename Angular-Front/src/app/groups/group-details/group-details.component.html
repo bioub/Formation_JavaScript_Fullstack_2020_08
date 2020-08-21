@@ -11,3 +11,11 @@
   <b>Description :</b>
   {{ group.description }}
 </p>
+
+<div *ngIf="group?.contacts?.length">
+  <b>Contacts :</b>
+  <ul>
+    <li *ngFor="let c of group.contacts">
+      <a [routerLink]="['/contacts', c._id]">{{c.firstName}} {{c.lastName}}</a></li>
+  </ul>
+</div>
