@@ -10,6 +10,10 @@ const contactSchema = new mongoose.Schema({
     required: true,
   },
   email: String,
+  group: {
+    type: mongoose.Types.ObjectId,
+    ref: 'Group'
+  }
 });
 
 const Contact = mongoose.model('Contact', contactSchema);

@@ -6,6 +6,10 @@ const groupSchema = new mongoose.Schema({
     required: true,
   },
   description: String,
+  contacts: [{
+    type: mongoose.Types.ObjectId,
+    ref: 'Contact'
+  }]
 });
 
 const Group = mongoose.model('Group', groupSchema);

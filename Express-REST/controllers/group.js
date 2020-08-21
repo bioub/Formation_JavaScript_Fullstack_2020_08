@@ -7,7 +7,7 @@ const Group = require('../models/group');
  */
 exports.list = async (req, res, next) => {
   try {
-    const groups = await Group.find();
+    const groups = await Group.find({}, 'name');
     res.json(groups);
   } catch (err) {
     next(err);
@@ -21,7 +21,7 @@ exports.list = async (req, res, next) => {
  */
 exports.show = async (req, res, next) => {
   try {
-    const group = await Group.findById(req.params.id);
+    const group = await Group.findById(req.params.id).populate('contacts');
 
     if (!group) {
       req.notFoundReason = `Group ${req.params.id} not found`;
