@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { delay } from 'rxjs/operators';
@@ -7,6 +7,8 @@ import { delay } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ContactService {
+
+  events = new EventEmitter<string>();
 
   constructor(private httpClient: HttpClient) { }
 
