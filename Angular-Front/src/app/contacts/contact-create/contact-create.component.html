@@ -1,1 +1,65 @@
-<p>contact-create works!</p>
+<form #form="ngForm" (submit)="form.valid && send()">
+  <div class="form-group">
+    <label class="test">Prénom</label>
+    <input
+      #firstName="ngModel"
+      type="text"
+      class="form-control"
+      name="firstName"
+      [(ngModel)]="contact.firstName"
+      required
+      [ngClass]="{
+        'is-invalid': firstName.invalid && (firstName.touched || form.submitted)
+      }"
+    />
+    <div
+      class="invalid-feedback"
+      *ngIf="firstName.invalid && (firstName.touched || form.submitted)"
+    >
+      Le prénom est obligatoire
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Nom</label>
+    <input
+      #lastName="ngModel"
+      type="text"
+      class="form-control"
+      name="lastName"
+      [(ngModel)]="contact.lastName"
+      required
+      [ngClass]="{
+        'is-invalid': lastName.invalid && (lastName.touched || form.submitted)
+      }"
+    />
+    <div
+      class="invalid-feedback"
+      *ngIf="lastName.invalid && (lastName.touched || form.submitted)"
+    >
+      Le nom est obligatoire
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Email</label>
+    <input
+      #email="ngModel"
+      type="email"
+      class="form-control"
+      name="email"
+      [(ngModel)]="contact.email"
+      email
+      [ngClass]="{
+        'is-invalid': email.invalid && (email.touched || form.submitted)
+      }"
+    />
+    <div
+      class="invalid-feedback"
+      *ngIf="email.invalid && (email.touched || form.submitted)"
+    >
+      L'email n'est pas au bon format
+    </div>
+  </div>
+  <div>
+    <button class="btn btn-primary">Create</button>
+  </div>
+</form>

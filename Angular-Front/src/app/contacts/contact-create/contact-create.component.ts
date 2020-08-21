@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ContactService } from '../contact.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact-create',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactCreateComponent implements OnInit {
 
-  constructor() { }
+  contact = {
+    firstName: '',
+    lastName: '',
+    email: '',
+  };
+
+  constructor(private contactService: ContactService, private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  send() {
+    this.contactService.create(this.contact).subscribe((contact) => {
+      this.router.navigate(['contacts', contact['_id']]);
+    });
   }
 
 }
