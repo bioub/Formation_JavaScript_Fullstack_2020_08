@@ -14,8 +14,18 @@
 
 <div *ngIf="group?.contacts?.length">
   <b>Contacts :</b>
-  <ul>
-    <li *ngFor="let c of group.contacts">
-      <a [routerLink]="['/contacts', c._id]">{{c.firstName}} {{c.lastName}}</a></li>
-  </ul>
+  <table class="table mt-3">
+    <tr>
+      <th>Nom complet</th>
+      <th>Actions</th>
+    </tr>
+    <tr *ngFor="let c of group.contacts">
+      <td>{{ c.firstName }} {{ c.lastName }}</td>
+      <td>
+        <a [routerLink]="['/contacts', c._id]">
+          Afficher
+        </a>
+      </td>
+    </tr>
+  </table>
 </div>

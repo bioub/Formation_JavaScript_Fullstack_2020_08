@@ -19,5 +19,5 @@
 
 <p *ngIf="contact?.group?._id">
   <b>Groupe :</b>
-  <a [routerLink]="['/groups', contact.group._id]">{{ contact.group.name }}</a>
+  <a [routerLink]="['/groups', contact.group._id]" class="ml-1 badge badge-secondary">{{ contact.group.name }}</a>
 </p>
