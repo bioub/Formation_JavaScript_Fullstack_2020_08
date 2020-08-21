@@ -1,7 +1,8 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
-import { delay } from 'rxjs/operators';
+import { delay, map } from 'rxjs/operators';
+import { orderBy } from 'lodash-es';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,9 @@ export class ContactService {
   constructor(private httpClient: HttpClient) { }
 
   getAll() {
-    return this.httpClient.get(environment.apiBaseUrl + '/api/contacts');
+    return this.httpClient.get(environment.apiBaseUrl + '/api/contacts').pipe(
+      map((data) => orderBy(data, ['lastName', 'firstName']))
+    );
   }
 
   getById(id) {
