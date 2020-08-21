@@ -1,27 +1,34 @@
-# AngularFront
+# Exercice
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.6.
+## Dans Express Rest
 
-## Development server
+Créer un nouveau model Group avec 2 champs :
+- nom (obligatoire)
+- description
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Créer les routes :
+- GET /api/groups
+- GET /api/groups/:id
+- POST /api/groups
 
-## Code scaffolding
+Insérer 3 groupes en base : Famille, Amis, Collègues
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Dans Angular
 
-## Build
+Créer un module groups avec un routeur
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Créer les mêmes composants que dans contacts pour lister, afficher le détails et créer des groupes
 
-## Running unit tests
+## Optionnel
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+En vous inspirant de https://mongoosejs.com/docs/populate.html 
 
-## Running end-to-end tests
+Ajouter une propriété group dans Contact et une propriétés contacts dans Group
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Utiliser l'API populate sur les routes
+- GET /api/groups/:id
+- GET /api/contacts/:id
 
-## Further help
+Dans Angular afficher les contacts ou le groupe correspondant.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Editer le formulaire de contact-create pour qu'il puisse sélectionner un groupe dans un menu déroulant.
