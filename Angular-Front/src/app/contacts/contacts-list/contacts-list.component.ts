@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ContactService } from '../contact.service';
 import { filter } from 'rxjs/operators';
+import { ContactService } from '../contact.service';
 
 @Component({
   selector: 'app-contacts-list',

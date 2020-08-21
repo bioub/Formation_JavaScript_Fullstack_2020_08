@@ -9,11 +9,7 @@ router.get('/', contactCtrl.list);
 
 router.get('/:id', contactCtrl.show);
 
-router.post('/',
-  authenticate,
-  express.json(),
-  contactCtrl.add
-);
+router.post('/', authenticate, express.json(), contactCtrl.add);
 
 router.delete('/:id', authenticate, contactCtrl.delete);
 

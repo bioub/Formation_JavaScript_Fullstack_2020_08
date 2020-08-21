@@ -12,8 +12,8 @@ const contactSchema = new mongoose.Schema({
   email: String,
   group: {
     type: mongoose.Types.ObjectId,
-    ref: 'Group'
-  }
+    ref: 'Group',
+  },
 });
 
 const Contact = mongoose.model('Contact', contactSchema);

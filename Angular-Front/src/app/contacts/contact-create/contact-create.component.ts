@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ContactService } from '../contact.service';
 import { Router } from '@angular/router';
 import { GroupService } from 'src/app/groups/group.service';
+import { ContactService } from '../contact.service';
 
 @Component({
   selector: 'app-contact-create',

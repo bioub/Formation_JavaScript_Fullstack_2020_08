@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ContactService } from '../contact.service';
 import { ActivatedRoute } from '@angular/router';
-import { flatMap, map, switchMap, tap } from 'rxjs/operators'
+import { map, switchMap, tap } from 'rxjs/operators';
+import { ContactService } from '../contact.service';
 
 @Component({
   selector: 'app-contact-details',

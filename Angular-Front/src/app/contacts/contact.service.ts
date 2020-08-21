@@ -1,8 +1,8 @@
-import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from '../../environments/environment';
-import { delay, map } from 'rxjs/operators';
+import { EventEmitter, Injectable } from '@angular/core';
 import { orderBy } from 'lodash-es';
+import { delay, map } from 'rxjs/operators';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'

@@ -9,10 +9,6 @@ router.get('/', groupCtrl.list);
 
 router.get('/:id', groupCtrl.show);
 
-router.post('/',
-  authenticate,
-  express.json(),
-  groupCtrl.add
-);
+router.post('/', authenticate, express.json(), groupCtrl.add);
 
 module.exports = router;
