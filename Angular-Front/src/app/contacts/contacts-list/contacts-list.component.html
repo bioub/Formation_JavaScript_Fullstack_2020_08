@@ -1,17 +1,11 @@
 <div class="list-group">
   <a
     class="list-group-item list-group-item-action"
-    routerLink="/contacts/123"
+    [routerLink]="[c._id]"
     routerLinkActive="active"
+    *ngFor="let c of contacts"
   >
-    Jean Dupont
-  </a>
-  <a
-    class="list-group-item list-group-item-action"
-    routerLink="/contacts/456"
-    routerLinkActive="active"
-  >
-    Eric Martin
+    {{c.firstName}} {{c.lastName}}
   </a>
 </div>
 

@@ -1,1 +1,14 @@
-<p>contact-details works!</p>
+<p>
+  <b>Prénom :</b>
+  {{ contact?.firstName }}
+</p>
+
+<p>
+  <b>Nom :</b>
+  {{ contact?.lastName }}
+</p>
+
+<p *ngIf="contact?.email">
+  <b>Email :</b>
+  {{ contact.email }}
+</p>

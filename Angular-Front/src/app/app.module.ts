@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './core/hello/hello.component';
 import { HomeComponent } from './core/home/home.component';
 import { NotFoundComponent } from './core/not-found/not-found.component';
+import { HttpClientModule } from '@angular/common/http';
 // import { ContactsModule } from './contacts/contacts.module'
 
 @NgModule({
@@ -17,12 +18,15 @@ import { NotFoundComponent } from './core/not-found/not-found.component';
     NotFoundComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     FormsModule,
-    // ContactsModule, 
+    // ContactsModule,
     AppRoutingModule, // en dernier si route **
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
